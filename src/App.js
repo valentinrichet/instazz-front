@@ -65,6 +65,7 @@ import MessageManager from './manager';
 import Recette from './recette' ;
 import Profil from './pageProfil' ;
 import Photo from './PagePhoto'
+import Test from './test'
 
 
 // npm i react-virtuoso
