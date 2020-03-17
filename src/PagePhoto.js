@@ -33,7 +33,8 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     display: 'flex',
-    flexDirection: 'column', 
+    flexDirection: 'column',
+    justify: 'flex-start', 
     float: 'left',
   },
 }));
@@ -195,7 +196,7 @@ export default function Photo() {
             spacing={0}
             direction="column"
             alignItems="center"
-            justify="center"
+            justify="flex-end"
             style={{ minHeight: '100vh' }}
           >
               <AlignItemsList/>
