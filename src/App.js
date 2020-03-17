@@ -61,6 +61,8 @@ import HomePage from './homePage'
 import Album from './mainPage'
 import PermanentDrawerRight from './drawer'
 
+import MessageManager from './manager';
+import Recette from './recette' ;
 
 
 // npm i react-virtuoso
@@ -104,7 +106,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    color: "white,"
+    color: "white",
   },
   avatar: {
     margin: theme.spacing(1),
@@ -282,6 +284,7 @@ function App() {
           <Route exact path="/signup" render={() => <SignUp />} />
           <Route exact path="/resetpwd" render={() => <ResetPwd />} />
           <Route exact path="/InstaFood" render={() => <InstaFood />} />
+          <Route exact path="/recette" render={() => <Recette />} />
         </div>
       </Router>
     </div>

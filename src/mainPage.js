@@ -15,6 +15,10 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import IconButton from '@material-ui/core/IconButton';
+import imagesData from './imagesData';
+
+
+//import MessageManager from "./manager";
 
 
 import PrimarySearchAppBar from './primarySearchBar'
@@ -97,11 +101,10 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="md">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Album layout
+              InstaFood
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet.
+              La cuisine, une aventure sans fin !
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -122,25 +125,25 @@ export default function Album() {
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map(card => (
+            {imagesData.map(card => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://assets.afcdn.com/recipe/20151003/20052_w1024h768c1cx480cy300.jpg"
+                    image={card.img}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Titre
+                      { card.title }}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                      { card.description }
                     </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                      View
+                      Voir recette
                     </Button>
                     <IconButton>
                         <FavoriteIcon/>
@@ -152,17 +155,21 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }
+
+
+/*
+<div className={classes.paper}>
+<GridList cellHeight={160} className={classes.paper} cols={3}>
+  {imagesData.map(tile => (
+    <GridListTile key={tile.img} cols={tile.cols || 1}>
+      <img src={tile.img} alt={tile.title} />
+    </GridListTile>
+  ))}
+</GridList>
+</div>
+*/
+
+
