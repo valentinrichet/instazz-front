@@ -63,6 +63,8 @@ import PermanentDrawerRight from './drawer'
 
 import MessageManager from './manager';
 import Recette from './recette' ;
+import Profil from './pageProfil' ;
+import Photo from './PagePhoto'
 
 
 // npm i react-virtuoso
@@ -285,6 +287,9 @@ function App() {
           <Route exact path="/resetpwd" render={() => <ResetPwd />} />
           <Route exact path="/InstaFood" render={() => <InstaFood />} />
           <Route exact path="/recette" render={() => <Recette />} />
+          <Route exact path="/profil" render={() => <Profil prenom="amelie" nom="divine" followers="155" following="127"/>} />
+          <Route exact path="/photo" render={() => <Photo />} />
+          <Route exact path="/test" render={() => <Test />} />
         </div>
       </Router>
     </div>

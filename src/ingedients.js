@@ -9,19 +9,19 @@ const Ingredients = [
     },
     {
       nom: 'tranches de bacon',
-      quantité: '8',
+      quantité: '8 ',
     },
     {
       nom: 'tranches de cheddar',
-      quantité: '4',
+      quantité: '4 ',
     },
     {
       nom: 'oignon rouge',
-      quantité: '1',
+      quantité: '1 ',
     },
     {
       nom: 'tomate',
-      quantité: '1',
+      quantité: '1 ',
     },
     {
       nom: 'feuilles de salade',

@@ -89,7 +89,7 @@ export default function Recette() {
                 <Grid item key={card} xs={12} md={6}>
                   <Card className={classes.card}>
                     <CardContent className={classes.cardContent}>
-                      <Typography gutterBottom variant="h5" component="h3">
+                      <Typography gutterBottom variant="h6" component="h3">
                         { card.quantité }
                         { card.nom }
                       </Typography>
@@ -100,9 +100,11 @@ export default function Recette() {
                 </Grid>
               ))}
             </Grid>
+            </Container>
             <div className={classes.titre} >
               Instructions
             </div>
+          <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={3}>
               {Instruction.map(card => (
                 <Grid item key={card} xs={12} md={16}>

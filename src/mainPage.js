@@ -146,7 +146,7 @@ export default function Album() {
                       Voir recette
                     </Button>
                     <IconButton>
-                        <FavoriteIcon/>
+                        <FavoriteIcon color= { card.aime } />
                     </IconButton>
                   </CardActions>
                 </Card>

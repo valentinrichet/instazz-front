@@ -16,6 +16,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Avatar from '@material-ui/core/Avatar';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -187,9 +188,7 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
+                <HomeIcon />
             </IconButton>
             <IconButton aria-label="show new notifications" color="inherit">
               <Badge badgeContent={5} color="secondary">
