@@ -7,13 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import PrimarySearchAppBar from './primarySearchBar'
-import CardMedia from '@material-ui/core/CardMedia';
-import Card from '@material-ui/core/Card';
-
+//import Container from '@material-ui/core/Container';
 
 
 const useStyles = makeStyles(theme => ({

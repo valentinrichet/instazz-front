@@ -39,23 +39,26 @@ const useStyles = makeStyles(theme => ({
 
 
 
+// email: 'valentin.richet@gmail.com',  {$email}
 
 export default function HomePage() {
     const classes = useStyles();
 
-    function FaireUnPost () {
-      axios.post('https://instazzback.valentinrichet.com/v1/sessions', {
-        email: 'valentin.richet@gmail.com',
-        password: '123456',
-      })
-      .then(function (response) {
-        console.log("ok");
-          alert("ok") ;
-      })
-      .catch(function (error) {
-        alert("pas ok") ;
-        console.log(error);
-    });
+    
+    async function FaireUnPost () {
+      try  {
+        const token = await axios.post('https://instazzback.valentinrichet.com/v1/sessions', {
+                email: 'valentin.richet@gmail.com',
+                password: '123456',
+              });
+        console.log(token);
+         
+        const data = await axios.get('https://instazzback.valentinrichet.com/v1/posts', { headers: {Authorization: `Bearer ${token}` } });
+        console.log(data);
+         
+        } catch(exception) {
+        alert("pas ok");
+        }
     }
 
     return (

@@ -1,7 +1,7 @@
 // Regarder material UI router
 
 
-import React, { useState } from 'react'
+import React/*, { useState }*/ from 'react'
 //import ReactDOM from 'react-dom'
 
 
@@ -12,7 +12,7 @@ import './App.css';
 
 import {
   BrowserRouter as Router,
-  Route, Switch, Link, Redirect, withRouter
+  Route, Switch
 } from 'react-router-dom'
 
 
@@ -21,30 +21,32 @@ import {
 //import Avatar from '@material-ui/core/Avatar';
 //import Button from '@material-ui/core/Button';
 //import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
+//import TextField from '@material-ui/core/TextField';
 //import FormControlLabel from '@material-ui/core/FormControlLabel';
 //import Checkbox from '@material-ui/core/Checkbox';
 //import Grid from '@material-ui/core/Grid';
 //import Box from '@material-ui/core/Box';
 //import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 //import Typography from '@material-ui/core/Typography';
-import { makeStyles, withTheme } from '@material-ui/core/styles';
+//import { makeStyles} from '@material-ui/core/styles';
 //import Container from '@material-ui/core/Container';
-import { withStyles } from '@material-ui/core/styles';
+//import { withStyles } from '@material-ui/core/styles';
 
 
 //import PropTypes from 'prop-types';
-import ListItem from '@material-ui/core/ListItem';
+//import ListItem from '@material-ui/core/ListItem';
 //import ListItemText from '@material-ui/core/ListItemText';
 //import { FixedSizeList }   from 'react-window';
 
 
 //import {Virtuoso} from 'react-virtuoso';
-import List from '@material-ui/core/List';
+//import List from '@material-ui/core/List';
 
 
-import faker from 'faker';
-import {useMemo} from 'react';
+//import faker from 'faker';
+
+
+//import {useMemo} from 'react';
 //import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 
 //import GridList from '@material-ui/core/GridList';
@@ -79,35 +81,9 @@ import Photo from './photo'
 
 
 
-const useStyles = makeStyles(theme => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    color: "white",
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.primary.main,
-  },
-  form: {
-    width: '100%', 
-    marginTop: theme.spacing(1),
-    color: "white",
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
-
-
-
-
-
 //https://dev.to/petyosi/creating-beautiful-virtualized-lists-with-material-ui-and-react-virtuoso-31i3
 
-
+/*
 const ListContainer = ({listRef, style, children}) => {
   return (
     <List ref={listRef} style={style}>
@@ -125,9 +101,10 @@ const ItemContainer = ({children, ...props}) => {
     </ListItem>
   );
 };
+*/
 
 
-
+/*
 const getUser = () => {
   let firstName = faker.name.firstName();
   let lastName = faker.name.lastName();
@@ -148,7 +125,9 @@ const sortUser = (a, b) => {
   }
   return 0;
 };
+*/
 
+/*
 const useUserRecords = count => {
   const allUsers = useMemo(
     () =>
@@ -161,6 +140,7 @@ const useUserRecords = count => {
 
   return allUsers;
 };
+*/
 
 
 
@@ -194,10 +174,6 @@ function ResetPwd () {
 
 
 function InstaFood () {
-  const classes = useStyles();
-
-  const users = useUserRecords(500);
-
   return(
     <div>
       <Album/>
@@ -214,8 +190,9 @@ function InstaFood () {
 // Modifier render dans signin enfaite 
 function App() {
 
-  const [page, setPage] = useState('home')
+  //const [page, setPage] = useState('home')
 
+  /*
   const content = () => {
     if (page === 'home') {
       return <Home />
@@ -227,15 +204,18 @@ function App() {
       return <InstaFood />
     }
   }
-
+  */
+  /*
  const toPage = (page) => (event) => {
     event.preventDefault()
     setPage(page)
   }
-
+  */
+  /*
   const padding = {
     padding: 5
   }
+  */
 
   return (
     <div className="App">
