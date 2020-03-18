@@ -157,7 +157,7 @@ export default function Profil(props) {
                 title="Image title"
                 />
                 <CardActions>
-                    <Button size="small" color="primary">
+                    <Button href="/photo" size="small" color="primary">
                         { card.title }
                     </Button>
                 </CardActions>

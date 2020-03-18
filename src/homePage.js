@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import SignUp from './signUp';
+
 
 
 
@@ -39,9 +41,11 @@ const useStyles = makeStyles(theme => ({
 
 
 
+
 export default function HomePage() {
     const classes = useStyles();
 
+    
 
     return (
       <Container component="main" maxWidth="xs">
@@ -111,14 +115,14 @@ export default function HomePage() {
             </Button>
             <Grid container >
               <Grid item xs="6" >
-               <Link to="/resetpwd" style={{color: "white"}}>  
+                <Button href="/resetpwd" style={{color: "white"}}>  
                     Mot de passe oublié ?
-                </Link >
+                </Button >     
               </Grid>
               <Grid item xs="6">
-                  <Link to="/signup" style={{color: "white"}}>
+                  <Button href="/signup" style={{color: "white"}}>
                     Inscrivez-vous ?
-                  </Link>
+                  </Button>
               </Grid>
             </Grid>
           </form>

@@ -24,6 +24,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import InboxIcon from '@material-ui/icons/Inbox';
 import DraftsIcon from '@material-ui/icons/Drafts';
+import AlignItemsList from './alignItemList'
 
 
 //import MessageManager from "./manager";
@@ -52,8 +53,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(4),
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(15),
     paddingBottom: theme.spacing(8),
+    marginLeft: theme.spacing(50)
   },
   card: {
     height: '100%',
@@ -114,12 +116,9 @@ export default function Profil(props) {
                 image='https://assets.afcdn.com/recipe/20151003/20052_w1024h768c1cx480cy300.jpg'
                 />
             </Card>
-            <Card className={classes.card}>
-                <CardMedia
-                className={classes.cardMedia}
-                image='https://assets.afcdn.com/recipe/20151003/20052_w1024h768c1cx480cy300.jpg'
-                />
-            </Card>
+            </Grid>
+            <Grid>
+                <AlignItemsList/>
             </Grid>
         ))}
         </Grid>

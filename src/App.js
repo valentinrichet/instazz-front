@@ -12,7 +12,7 @@ import './App.css';
 
 import {
   BrowserRouter as Router,
-  Route, Link, Redirect, withRouter
+  Route, Switch, Link, Redirect, withRouter
 } from 'react-router-dom'
 
 
@@ -64,8 +64,8 @@ import PermanentDrawerRight from './drawer'
 import MessageManager from './manager';
 import Recette from './recette' ;
 import Profil from './pageProfil' ;
-import Photo from './PagePhoto'
-import Test from './test'
+//import Photo from './PagePhoto'
+import Photo from './photo'
 
 
 // npm i react-virtuoso
@@ -189,53 +189,33 @@ const useUserRecords = count => {
 
 
 
-const Home = () => (
-  <div> 
-    <HomePage/>
-    <h2 style={{color: "white"}}></h2> 
-  </div>
-)
-
-
-
-
-
-const SignUp = () => (
-  <div> 
-    <SignUpPage/>
-  </div>
-)
-
-const ResetPwd = () => (
-  <div> 
-    <ForgotPasswordPage/> 
-  </div>
-)
-
-
-/*
-function InstaFood () {
-  const classes = useStyles();
-
-  const users = useUserRecords(500);
-
+function Home () {
   return(
     <div> 
-    <h2 style={{color: "white"}}>Ceci est la page principale</h2>
-  
-    <div className={classes.paper}>
-        <GridList cellHeight={160} className={classes.paper} cols={3}>
-          {imagesData.map(tile => (
-            <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={tile.img} alt={tile.title} />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
-  </div>
+      <HomePage/>
+      <h2 style={{color: "white"}}></h2> 
+    </div>
   )
 }
-*/
+
+
+
+function SignUp () {
+  return(
+    <div> 
+    <SignUpPage/>
+    </div>
+  )
+}
+
+function ResetPwd () {
+  return(
+    <div> 
+      <ForgotPasswordPage/> 
+    </div>
+  )
+}
+
 
 
 function InstaFood () {
@@ -261,9 +241,9 @@ function App() {
   const content = () => {
     if (page === 'home') {
       return <Home />
-    } else if (page === 'inscription') {
+    } else if (page === 'signup') {
       return <SignUp />
-    } else if (page === 'users') {
+    } else if (page === 'resetpwd') {
       return <ResetPwd />
     } else if (page == 'InstaFood') {
       return <InstaFood />
@@ -283,14 +263,15 @@ function App() {
     <div className="App">
        <Router>
         <div>
-          <Route exact path="/" render={() => <Home />} />
-          <Route exact path="/signup" render={() => <SignUp />} />
-          <Route exact path="/resetpwd" render={() => <ResetPwd />} />
-          <Route exact path="/InstaFood" render={() => <InstaFood />} />
-          <Route exact path="/recette" render={() => <Recette />} />
-          <Route exact path="/profil" render={() => <Profil prenom="amelie" nom="divine" followers="155" following="127"/>} />
-          <Route exact path="/photo" render={() => <Photo />} />
-          <Route exact path="/test" render={() => <Test />} />
+          <Switch>
+            <Route exact path="/" render={() => <Home />} />
+            <Route path="/signup"> <SignUp /> </Route>
+            <Route path="/resetpwd"> <ResetPwd /> </Route>
+            <Route path="/InstaFood"> <InstaFood/> </Route>
+            <Route path="/recette"> <Recette /> </Route>
+            <Route path="/profil"> <Profil prenom="amelie" nom="divine" followers="155" following="127"/>} </Route>
+            <Route path="/photo"> <Photo /> </Route>
+          </Switch>
         </div>
       </Router>
     </div>

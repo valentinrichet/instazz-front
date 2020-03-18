@@ -187,22 +187,15 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            <IconButton href="/InstaFood" color="inherit">
                 <HomeIcon />
             </IconButton>
-            <IconButton aria-label="show new notifications" color="inherit">
+            <IconButton color="inherit">
               <Badge badgeContent={5} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
+            <IconButton href="/profil">
               <Avatar alt="Amelie" src="https://raw.githubusercontent.com/mui-org/material-ui/master/docs/public/static/images/avatar/3.jpg" />
             </IconButton>
           </div>

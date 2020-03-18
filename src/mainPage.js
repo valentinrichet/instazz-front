@@ -142,8 +142,8 @@ export default function Album() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Voir recette
+                    <Button href="/photo" size="small" color="primary">
+                      Commentaires
                     </Button>
                     <IconButton>
                         <FavoriteIcon color= { card.aime } />
@@ -160,16 +160,6 @@ export default function Album() {
 }
 
 
-/*
-<div className={classes.paper}>
-<GridList cellHeight={160} className={classes.paper} cols={3}>
-  {imagesData.map(tile => (
-    <GridListTile key={tile.img} cols={tile.cols || 1}>
-      <img src={tile.img} alt={tile.title} />
-    </GridListTile>
-  ))}
-</GridList>
-</div>
-*/
+
 
 
