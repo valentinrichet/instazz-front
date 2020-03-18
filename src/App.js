@@ -215,7 +215,7 @@ function App() {
 
   return (
     <div className="App">
-       <Router>
+       <Router basename="instazz-front">
         <div>
           <Switch>
             <Route exact path="/" render={() => <NameForm />} />
