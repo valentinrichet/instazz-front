@@ -79,21 +79,6 @@ const useStyles = makeStyles(theme => ({
 
 
 
-/*
-      <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            InstaFood
-          </Typography>
-          <Typography variant="h6" color="inherit" align="center">
-            InstaFood
-          </Typography>
-        </Toolbar>
-      </AppBar>
-*/
-
-
 
 export default function Profil(props) {
   const classes = useStyles();
@@ -172,75 +157,3 @@ export default function Profil(props) {
   );
 }
 
-/*
-
-<div className={classes.heroContent}>
-<Container maxWidth="md">
-  <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-    InstaFood
-  </Typography>
-  <Typography variant="h5" align="center" color="textSecondary" paragraph>
-    La cuisine, une aventure sans fin !
-  </Typography>
-  <div className={classes.heroButtons}>
-    <Grid container spacing={2} justify="center">
-      <Grid item>
-        <Button variant="contained" color="primary">
-          Ajouter une assiette
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="outlined" color="primary">
-          Chercher une assiette
-        </Button>
-      </Grid>
-    </Grid>
-  </div>
-</Container>
-</div>
-<Container className={classes.cardGrid} maxWidth="md">
-<Grid container spacing={4}>
-  {imagesData.map(card => (
-    <Grid item key={card} xs={12} sm={6} md={4}>
-      <Card className={classes.card}>
-        <CardMedia
-          className={classes.cardMedia}
-          image={card.img}
-          title="Image title"
-        />
-        <CardContent className={classes.cardContent}>
-          <Typography gutterBottom variant="h5" component="h2">
-            { card.title }}
-          </Typography>
-          <Typography>
-            { card.description }
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Voir recette
-          </Button>
-          <IconButton>
-              <FavoriteIcon color= { card.aime } />
-          </IconButton>
-        </CardActions>
-      </Card>
-    </Grid>
-  ))}
-</Grid>
-</Container>
-*/
-
-
-
-/*
-      <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container spacing={4}>
-            <Avatar alt="Amelie" src="https://raw.githubusercontent.com/mui-org/material-ui/master/docs/public/static/images/avatar/3.jpg"  className={classes.large} />
-            {imagesData.map(card => (
-            <Grid item key={card} xs={12} sm={6} md={12} className={classes.donnees}>
-                { card.title }
-            </Grid> ))}
-        </Grid>
-      </Container>
-*/

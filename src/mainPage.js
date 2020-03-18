@@ -60,19 +60,6 @@ const useStyles = makeStyles(theme => ({
 
 
 
-/*
-      <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            InstaFood
-          </Typography>
-          <Typography variant="h6" color="inherit" align="center">
-            InstaFood
-          </Typography>
-        </Toolbar>
-      </AppBar>
-*/
 
 
 

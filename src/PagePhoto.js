@@ -69,22 +69,3 @@ export default function Photo() {
     </React.Fragment>
   );
 }
-
-/*
-<React.Fragment>
-<CssBaseline />
-<PrimarySearchAppBar/> 
-  <Container component="main" className={classes.cardGrid} maxWidth="md">
-    <div className={classes.paper}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-              <Avatar alt="Amelie" src="https://raw.githubusercontent.com/mui-org/material-ui/master/docs/public/static/images/avatar/3.jpg"  className={classes.large} />
-          </Grid>
-
-
-          
-        </Grid>
-    </div>
-  </Container>
-</React.Fragment>
-*/
