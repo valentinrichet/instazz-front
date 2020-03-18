@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/instazz-front/static/css/main.e1b2a460.chunk.css",
-    "main.js": "/instazz-front/static/js/main.4825d0ae.chunk.js",
-    "main.js.map": "/instazz-front/static/js/main.4825d0ae.chunk.js.map",
+    "main.js": "/instazz-front/static/js/main.19b1cd86.chunk.js",
+    "main.js.map": "/instazz-front/static/js/main.19b1cd86.chunk.js.map",
     "runtime-main.js": "/instazz-front/static/js/runtime-main.b3e2e24d.js",
     "runtime-main.js.map": "/instazz-front/static/js/runtime-main.b3e2e24d.js.map",
     "static/js/2.927da64d.chunk.js": "/instazz-front/static/js/2.927da64d.chunk.js",
     "static/js/2.927da64d.chunk.js.map": "/instazz-front/static/js/2.927da64d.chunk.js.map",
     "index.html": "/instazz-front/index.html",
-    "precache-manifest.6dd0f4b559ebd9bc3194bcc69e4d7d4c.js": "/instazz-front/precache-manifest.6dd0f4b559ebd9bc3194bcc69e4d7d4c.js",
+    "precache-manifest.3d9df8cfdfea31fdb37eb67feb9370ac.js": "/instazz-front/precache-manifest.3d9df8cfdfea31fdb37eb67feb9370ac.js",
     "service-worker.js": "/instazz-front/service-worker.js",
     "static/css/main.e1b2a460.chunk.css.map": "/instazz-front/static/css/main.e1b2a460.chunk.css.map",
     "static/js/2.927da64d.chunk.js.LICENSE.txt": "/instazz-front/static/js/2.927da64d.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.b3e2e24d.js",
     "static/js/2.927da64d.chunk.js",
     "static/css/main.e1b2a460.chunk.css",
-    "static/js/main.4825d0ae.chunk.js"
+    "static/js/main.19b1cd86.chunk.js"
   ]
 }
