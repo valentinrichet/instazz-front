@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/instazz-front/precache-manifest.b737a189affdbb1712b1f9252614604e.js"
+  "/instazz-front/precache-manifest.b385aeaa38016aa7296264d6a685a0a5.js"
 );
 
 self.addEventListener('message', (event) => {

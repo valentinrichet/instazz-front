@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/instazz-front/static/css/main.e1b2a460.chunk.css",
-    "main.js": "/instazz-front/static/js/main.aa56551b.chunk.js",
-    "main.js.map": "/instazz-front/static/js/main.aa56551b.chunk.js.map",
+    "main.js": "/instazz-front/static/js/main.43a7e532.chunk.js",
+    "main.js.map": "/instazz-front/static/js/main.43a7e532.chunk.js.map",
     "runtime-main.js": "/instazz-front/static/js/runtime-main.b3e2e24d.js",
     "runtime-main.js.map": "/instazz-front/static/js/runtime-main.b3e2e24d.js.map",
-    "static/js/2.927da64d.chunk.js": "/instazz-front/static/js/2.927da64d.chunk.js",
-    "static/js/2.927da64d.chunk.js.map": "/instazz-front/static/js/2.927da64d.chunk.js.map",
+    "static/js/2.2d6a2932.chunk.js": "/instazz-front/static/js/2.2d6a2932.chunk.js",
+    "static/js/2.2d6a2932.chunk.js.map": "/instazz-front/static/js/2.2d6a2932.chunk.js.map",
     "index.html": "/instazz-front/index.html",
-    "precache-manifest.b737a189affdbb1712b1f9252614604e.js": "/instazz-front/precache-manifest.b737a189affdbb1712b1f9252614604e.js",
+    "precache-manifest.b385aeaa38016aa7296264d6a685a0a5.js": "/instazz-front/precache-manifest.b385aeaa38016aa7296264d6a685a0a5.js",
     "service-worker.js": "/instazz-front/service-worker.js",
     "static/css/main.e1b2a460.chunk.css.map": "/instazz-front/static/css/main.e1b2a460.chunk.css.map",
-    "static/js/2.927da64d.chunk.js.LICENSE.txt": "/instazz-front/static/js/2.927da64d.chunk.js.LICENSE.txt",
+    "static/js/2.2d6a2932.chunk.js.LICENSE.txt": "/instazz-front/static/js/2.2d6a2932.chunk.js.LICENSE.txt",
     "static/media/index.css": "/instazz-front/static/media/fondEcran.ba301dbf.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b3e2e24d.js",
-    "static/js/2.927da64d.chunk.js",
+    "static/js/2.2d6a2932.chunk.js",
     "static/css/main.e1b2a460.chunk.css",
-    "static/js/main.aa56551b.chunk.js"
+    "static/js/main.43a7e532.chunk.js"
   ]
 }
