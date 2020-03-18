@@ -21,7 +21,7 @@ import {
 //import Avatar from '@material-ui/core/Avatar';
 //import Button from '@material-ui/core/Button';
 //import CssBaseline from '@material-ui/core/CssBaseline';
-//import TextField from '@material-ui/core/TextField';
+import TextField from '@material-ui/core/TextField';
 //import FormControlLabel from '@material-ui/core/FormControlLabel';
 //import Checkbox from '@material-ui/core/Checkbox';
 //import Grid from '@material-ui/core/Grid';
@@ -70,7 +70,7 @@ import Photo from './photo'
 
 //import axios from 'axios';
 
-//import aireUnPost from './test'
+//import Test from './test'
 
 
 // npm i react-virtuoso
@@ -78,6 +78,23 @@ import Photo from './photo'
 // npm i faker
 
 
+
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import axios from 'axios';
+
+
+import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -145,6 +162,7 @@ const useUserRecords = count => {
 
 
 
+
 function Home () {
   return(
     <div> 
@@ -181,8 +199,167 @@ function InstaFood () {
   )
 }
 
+/*
+export default function HomePage(props) {
+  const classes = useStyles();
+
+  
+  async function FaireUnPost () {
+    try  {
+      const token = await axios.post('https://instazzback.valentinrichet.com/v1/sessions', {
+              email: props.email,
+              password: props.mdp,
+            });
+      console.log(token.data);
+       
+      const data = await axios.get('https://instazzback.valentinrichet.com/v1/posts', { headers: {Authorization: `Bearer ${token.data}` } });
+      console.log(data);
+       
+      } catch(exception) {
+      alert("pas ok");
+      }
+  }
+
+  function Afficher () {
+    console.log()
+  }
 
 
+
+function Afficher () {
+  console.log()
+}
+*/
+/*
+const styles = theme => ({
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    color: "white,"
+  },
+});
+*/
+
+
+
+async function FaireUnPost (login,mdp) {
+  try  {
+    const token = await axios.post('https://instazzback.valentinrichet.com/v1/sessions', {
+            email: login,
+            password: mdp,
+          });
+    console.log(login);
+    console.log(token.data);
+     
+    const data = await axios.get('https://instazzback.valentinrichet.com/v1/posts', { headers: {Authorization: `Bearer ${token.data}` } });
+    console.log(data);
+    } catch(exception) {
+    alert("pas ok");
+    }
+}
+
+
+
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { login: '', password: '' , url: 'InstaFood'};
+
+    this.handleChange1 = this.handleChange1.bind(this);
+    this.handleChange2 = this.handleChange2.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange1(event) {
+    this.setState({login: event.target.value});
+  }
+
+  handleChange2(event) {
+    this.setState({password: event.target.value});
+  }
+
+  handleSubmit(event) {
+    FaireUnPost(this.state.login,this.state.password) ;
+    this.setState({redirect: true});
+  }
+  
+  
+
+  render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/InstaFood" />;
+    }
+    return (
+      <Container component="main" maxWidth="xs">
+        <div >
+        <Typography component="h1" variant="h5" style={{color: "white" }}  >
+          Sign in
+        </Typography>
+      <form onSubmit={this.handleSubmit}>
+            <TextField
+              login={this.state.login} 
+              onChange={this.handleChange1}
+              autoComplete="email"
+              variant="outlined" 
+              margin="normal"
+              label="Email"
+              fullWidth
+              InputLabelProps={{
+                style: {
+                  textOverflow: 'ellipsis',
+                  color: 'white'
+                } }} 
+              InputProps={{
+                style: {
+                  color: 'white'
+              }}}
+            />
+            <TextField
+              password={this.state.login} 
+              onChange={this.handleChange2}
+              fullWidth
+              variant="outlined"
+              margin="normal"
+              label="Mot de passe"
+              InputLabelProps={{
+                style: {
+                  textOverflow: 'ellipsis',
+                  color: 'white'
+                } }}
+              InputProps={{
+                style: {
+                  color: 'white'
+              }}}
+            />
+            <Button 
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+
+            >
+            Sign In
+            </Button>
+            <Grid container>
+              <Grid item xs={12} sm={6}>
+                <Button href="/resetpwd" style={{color: "white"}}>  
+                    Mot de passe oublié ?
+                </Button >     
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                  <Button href="/signup" style={{color: "white"}}>
+                    Inscrivez-vous ?
+                  </Button>
+              </Grid>
+            </Grid>
+          </form>
+          </div>
+        </Container>
+    );
+  }
+}
 
 
 
@@ -190,39 +367,12 @@ function InstaFood () {
 // Modifier render dans signin enfaite 
 function App() {
 
-  //const [page, setPage] = useState('home')
-
-  /*
-  const content = () => {
-    if (page === 'home') {
-      return <Home />
-    } else if (page === 'signup') {
-      return <SignUp />
-    } else if (page === 'resetpwd') {
-      return <ResetPwd />
-    } else if (page == 'InstaFood') {
-      return <InstaFood />
-    }
-  }
-  */
-  /*
- const toPage = (page) => (event) => {
-    event.preventDefault()
-    setPage(page)
-  }
-  */
-  /*
-  const padding = {
-    padding: 5
-  }
-  */
-
   return (
     <div className="App">
        <Router>
         <div>
           <Switch>
-            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/" render={() => <NameForm />} />
             <Route path="/signup"> <SignUp /> </Route>
             <Route path="/resetpwd"> <ResetPwd /> </Route>
             <Route path="/InstaFood"> <InstaFood/> </Route>

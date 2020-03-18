@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-// email: 'valentin.richet@gmail.com',  {$email}
+
 
 export default function HomePage() {
     const classes = useStyles();
@@ -51,15 +51,21 @@ export default function HomePage() {
                 email: 'valentin.richet@gmail.com',
                 password: '123456',
               });
-        console.log(token);
+        console.log(token.data);
          
-        const data = await axios.get('https://instazzback.valentinrichet.com/v1/posts', { headers: {Authorization: `Bearer ${token}` } });
+        const data = await axios.get('https://instazzback.valentinrichet.com/v1/posts', { headers: {Authorization: `Bearer ${token.data}` } });
         console.log(data);
          
         } catch(exception) {
         alert("pas ok");
         }
     }
+
+    function Afficher () {
+      console.log()
+    }
+
+   
 
     return (
       <Container component="main" maxWidth="xs">
@@ -117,13 +123,12 @@ export default function HomePage() {
               label="Se souvenir de moi"
             />
             <Button 
-              
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
-              onClick= {FaireUnPost}
+              onClick={Afficher} 
             >
               Sign In
             </Button>
@@ -144,3 +149,8 @@ export default function HomePage() {
       </Container>
     );
   }
+
+  /*
+  valentin.richet@gmail.com',
+              password: '123456',
+*/

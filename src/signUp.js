@@ -126,11 +126,7 @@ export default function SignUp() {
                             InputLabelProps={{
                             shrink: true,
                             }}
-                            InputLabelProps={{
-                                style: {
-                                textOverflow: 'ellipsis',
-                                color: 'white'
-                                } }}
+                          
                             InputProps={{
                                 style: {
                                 color: 'white'
