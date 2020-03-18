@@ -2,11 +2,11 @@
 
 
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+//import ReactDOM from 'react-dom'
 
 
 //import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 
@@ -18,40 +18,39 @@ import {
 
 
 //import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
+//import Avatar from '@material-ui/core/Avatar';
+//import Button from '@material-ui/core/Button';
+//import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-//import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
+//import Checkbox from '@material-ui/core/Checkbox';
+//import Grid from '@material-ui/core/Grid';
+//import Box from '@material-ui/core/Box';
+//import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+//import Typography from '@material-ui/core/Typography';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+//import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import { FixedSizeList }   from 'react-window';
+//import ListItemText from '@material-ui/core/ListItemText';
+//import { FixedSizeList }   from 'react-window';
 
 
-import {Virtuoso} from 'react-virtuoso';
+//import {Virtuoso} from 'react-virtuoso';
 import List from '@material-ui/core/List';
 
 
 import faker from 'faker';
 import {useMemo} from 'react';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+//import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+//import GridList from '@material-ui/core/GridList';
+//import GridListTile from '@material-ui/core/GridListTile';
 
-import imagesData from './imagesData';
+//import imagesData from './imagesData';
 
 
 
@@ -59,13 +58,17 @@ import SignUpPage from './signUp' ;
 import ForgotPasswordPage from './forgotPassword' ;
 import HomePage from './homePage'
 import Album from './mainPage'
-import PermanentDrawerRight from './drawer'
+//import PermanentDrawerRight from './drawer'
 
-import MessageManager from './manager';
+//import MessageManager from './manager';
 import Recette from './recette' ;
 import Profil from './pageProfil' ;
 //import Photo from './PagePhoto'
 import Photo from './photo'
+
+//import axios from 'axios';
+
+//import aireUnPost from './test'
 
 
 // npm i react-virtuoso
@@ -73,34 +76,7 @@ import Photo from './photo'
 // npm i faker
 
 
-const StyledTextField = withStyles({
-  root: {
-    color: 'white',
-  },
-  label: {
-    textTransform: 'capitalize',
-    color: "white",
-  },
-})(TextField);
 
-
-
-const stylesJo = {
-  'input-label': {
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    width: '100%',
-    color: 'red'
-  },
-
-  'input': {
-    '&::placeholder': {
-      textOverflow: 'ellipsis !important',
-      color: 'blue'
-    }
-  }
-};
 
 
 const useStyles = makeStyles(theme => ({
@@ -193,7 +169,6 @@ function Home () {
   return(
     <div> 
       <HomePage/>
-      <h2 style={{color: "white"}}></h2> 
     </div>
   )
 }
@@ -229,6 +204,9 @@ function InstaFood () {
     </div>
   )
 }
+
+
+
 
 
 
@@ -278,6 +256,6 @@ function App() {
   );
 }
 
-export default App;
 
+export default App;
 

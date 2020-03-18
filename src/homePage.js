@@ -5,16 +5,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import SignUp from './signUp';
+import axios from 'axios';
 
-
+///import FaireUnPost from './test'
 
 
 const useStyles = makeStyles(theme => ({
@@ -45,7 +43,20 @@ const useStyles = makeStyles(theme => ({
 export default function HomePage() {
     const classes = useStyles();
 
-    
+    function FaireUnPost () {
+      axios.post('https://instazzback.valentinrichet.com/v1/sessions', {
+        email: 'valentin.richet@gmail.com',
+        password: '123456',
+      })
+      .then(function (response) {
+        console.log("ok");
+          alert("ok") ;
+      })
+      .catch(function (error) {
+        alert("pas ok") ;
+        console.log(error);
+    });
+    }
 
     return (
       <Container component="main" maxWidth="xs">
@@ -59,7 +70,6 @@ export default function HomePage() {
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
-              color= "white"
               variant="outlined" 
               margin="normal"
               required
@@ -104,22 +114,23 @@ export default function HomePage() {
               label="Se souvenir de moi"
             />
             <Button 
-              href="/InstaFood"
+              
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick= {FaireUnPost}
             >
               Sign In
             </Button>
-            <Grid container >
-              <Grid item xs="6" >
+            <Grid container>
+              <Grid item xs={12} sm={6}>
                 <Button href="/resetpwd" style={{color: "white"}}>  
                     Mot de passe oublié ?
                 </Button >     
               </Grid>
-              <Grid item xs="6">
+              <Grid item xs={12} sm={6}>
                   <Button href="/signup" style={{color: "white"}}>
                     Inscrivez-vous ?
                   </Button>
