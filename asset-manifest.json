@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/instazz-front/static/css/main.e1b2a460.chunk.css",
+    "main.js": "/instazz-front/static/js/main.ea65cbfb.chunk.js",
+    "main.js.map": "/instazz-front/static/js/main.ea65cbfb.chunk.js.map",
+    "runtime-main.js": "/instazz-front/static/js/runtime-main.b3e2e24d.js",
+    "runtime-main.js.map": "/instazz-front/static/js/runtime-main.b3e2e24d.js.map",
+    "static/js/2.927da64d.chunk.js": "/instazz-front/static/js/2.927da64d.chunk.js",
+    "static/js/2.927da64d.chunk.js.map": "/instazz-front/static/js/2.927da64d.chunk.js.map",
+    "index.html": "/instazz-front/index.html",
+    "precache-manifest.298b21ac51018182b8c6407007c64f94.js": "/instazz-front/precache-manifest.298b21ac51018182b8c6407007c64f94.js",
+    "service-worker.js": "/instazz-front/service-worker.js",
+    "static/css/main.e1b2a460.chunk.css.map": "/instazz-front/static/css/main.e1b2a460.chunk.css.map",
+    "static/js/2.927da64d.chunk.js.LICENSE.txt": "/instazz-front/static/js/2.927da64d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/instazz-front/static/media/fondEcran.ba301dbf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3e2e24d.js",
+    "static/js/2.927da64d.chunk.js",
+    "static/css/main.e1b2a460.chunk.css",
+    "static/js/main.ea65cbfb.chunk.js"
+  ]
+}
